@@ -22,12 +22,57 @@
             <h2> FL UNBOXED:<br>Drop Mystère in Paris</h2>
             <p>Remplissez vos infos pour débloquer le Drop.</p>
 
-            <form>
-                <div class="input-group">
-                    <input type="email" placeholder="Email" required>
-                    <input type="text" placeholder="Nom" required>
+            <form id="UnboxingForm">
 
-                    <button id="playButton">Lancer l'Unboxing</button>
+                <div class="form_email">
+                    <label>Email *</label>
+                    <input type="email" placeholder="Votre e-mail" required>
+                </div>
+
+                <div class="form_nom_prenom">
+                    <div class="input_nom">
+                        <label>Nom *</label>
+                        <input type="text" placeholder="Votre Nom" required>
+                    </div>
+                    <div class="input_prenom">
+                        <label>Prénom *</label>
+                        <input type="text" placeholder="Votre Prénom" required>
+                    </div>
+                </div>
+
+                <div class="form_tel_adresse">
+                    <div class="input_tel">
+                        <label>Téléphone</label>
+                        <input type="tel" placeholder="Votre n° de téléphone">
+                    </div>
+                    <div class="input_adresse">
+                        <label>Adresse Postale</label>
+                        <input type="text" placeholder="Votre Adresse Postale">
+                    </div>
+                </div>
+
+                <div class="form_age_sexe">
+                    <div class="input_age">
+                        <label>Âge</label>
+                        <input type="number" placeholder="Votre Âge">
+                    </div>
+                    <div class="input_sexe">
+                        <label>Sexe</label>
+                        <select>
+                            <option value="">Votre Sexe</option>
+                            <option value="H">Homme</option>
+                            <option value="F">Femme</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form_reglement">
+                    <input type="checkbox" id="reglement">
+                    <label for="reglement">J'accepte le règlement</label>
+                </div>
+
+                <button id="playButton" type="submit">LANCER L'UNBOXING</button>
+
             </form>
 
 
