@@ -1,0 +1,287 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+.main-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Section Image */
+.hero-image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+}
+
+.main-img {
+    max-width: 80%;
+    height: auto;
+    border: 1px solid #333;
+}
+
+/* Section Formulaire */
+.form-section {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+}
+
+.logo { width: 140px; margin-bottom: 20px; }
+
+.title {
+    font-style: italic;
+    font-weight: 800;
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    color: #888;
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+
+.registration-form {
+    width: 100%;
+    max-width: 450px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .input-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    font-size: 11px;
+    color: #666;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #fff;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 11px;
+    color: #888;
+    margin: 20px 0;
+}
+
+.btn-main {
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-main:hover {
+    background-color: #ddd;
+}
+
+.footer-note {
+    font-size: 10px;
+    color: #444;
+    margin-top: 30px;
+}
+
+
+/* ============== ============== ==============   CSS de la page2 ============== ============== ============== */
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #1a1a1a; /* Fond de la page sombre */
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-text {
+    font-style: italic;
+    font-weight: 800;
+    font-size: 24px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.box-container {
+    width: 520px;  /* Taille exacte Figma */
+    height: 520px; /* Taille exacte Figma */
+    background-color: #333333; /* Couleur Figma */
+    border: 1px solid #ffffff; /* Bordure 1px blanche */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    overflow: hidden; /* Pour que l'image ne dépasse pas si elle est plus grande */
+}
+
+.box-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* L'image remplira tout le cadre sans être déformée */
+}
+
+.btn-action {
+    width: 400px; /* Taille approximative du bouton blanc */
+    padding: 18px 0;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-action:hover {
+    opacity: 0.9;
+}
+
+
+/* ============== ============== ==============   CSS de la page3 ============== ============== ============== */
+/* --- SECTION DES HALOS LUMINEUX (GLOWS) --- */
+
+
+/* --- BASE --- */
+* { box-sizing: border-box; }
+body, html {
+    margin: 0; padding: 0;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+.bg-pattern {
+    background: repeating-linear-gradient(90deg, #000, #000 2px, #0c0c0c 2px, #0c0c0c 4px);
+}
+
+.flex-centered { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.no-scroll { overflow: hidden; }
+
+/* --- TITRES --- */
+.main-title { font-style: italic; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin: 10px 0; }
+.centered { text-align: center; }
+.subtitle { color: #888; margin-bottom: 30px; font-size: 14px; }
+
+/* --- CADRES & IMAGES --- */
+.mystery-box-frame, .media-frame {
+    border: 1px solid #ffffff;
+    background-color: #333333;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame-520 { width: 520px; height: 520px; margin: 40px 0; }
+.frame-538 { width: 538px; height: 539px; margin: 30px 0; }
+
+.contained-img {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+    z-index: 2;
+}
+
+/* --- LOGO INTÉGRÉ DANS LE CADRE --- */
+.logo-header-box {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    width: 120px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    padding: 5px;
+}
+.logo-fit { max-width: 90%; max-height: 90%; object-fit: contain; }
+
+/* --- DÉCORATION WIREFRAME --- */
+.wireframe-lines::before, .wireframe-lines::after {
+    content: '';
+    position: absolute;
+    background: rgba(255,255,255,0.1);
+    width: 150%; height: 1px;
+    z-index: 1;
+}
+.wireframe-lines::before { transform: rotate(45deg); }
+.wireframe-lines::after { transform: rotate(-45deg); }
+
+/* --- BOUTONS --- */
+.btn-primary {
+    background: #ffffff; color: #000; border: none; padding: 15px;
+    font-weight: bold; text-transform: uppercase; cursor: pointer; width: 100%;
+}
+.btn-large { width: 400px; padding: 20px; }
+
+/* --- GLOWS --- */
+.corner-glow { position: absolute; width: 450px; height: 450px; border-radius: 50%; filter: blur(100px); opacity: 0.5; z-index: 0; }
+.red-glow { top: -100px; left: -100px; background: #ff0000; }
+.magenta-glow { top: -100px; right: -100px; background: #ff00ff; }
+.cyan-glow { bottom: -100px; left: -100px; background: #00ffff; }
+.green-glow { bottom: -100px; right: -100px; background: #00ff00; }
+
+/* --- LAYOUT INSCRIPTION --- */
+.registration-layout { display: flex; height: 100vh; }
+.hero-section { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px; }
+.media-frame { width: 100%; height: 85%; }
+.form-section { flex: 1; padding: 60px; display: flex; flex-direction: column; justify-content: center; }
+.field-row { display: flex; gap: 15px; }
+.field, .field-full { margin-bottom: 15px; width: 100%; }
+input { width: 100%; background: transparent; border: 1px solid #444; color: #fff; padding: 12px; }
+
+/* --- SPINNER --- */
+.custom-spinner { width: 35px; height: 35px; border: 3px solid rgba(255,255,255,0.2); border-top: 3px solid #fff; border-radius: 50%; animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }

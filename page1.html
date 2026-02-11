@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FL Unboxed - Inscription</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importation de la police Inter pour être fidèle au design -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Section Gauche : Image -->
+        <div class="hero-image-section">
+            <img src="omage/Bo_te Cadeau Sans Texte 4.png" alt="Mystery Drop" class="main-img">
+        </div>
+
+        <!-- Section Droite : Formulaire -->
+        <div class="form-section">
+            <img src="omage/Logo Foot Locker Style 3.png" alt="Logo FL" class="logo">
+            <h1 class="title">FL UNBOXED :<br>DROP MYSTÈRE IN PARIS</h1>
+            <p class="subtitle">Remplissez vos infos pour débloquer le Drop.</p>
+            
+            <form class="registration-form">
+                <div class="input-group">
+                    <label>Email *</label>
+                    <input type="email" placeholder="Votre e-mail" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Nom *</label>
+                        <input type="text" placeholder="Votre Nom" required>
+                    </div>
+                    <div class=git "input-group">
+                        <label>Prénom *</label>
+                        <input type="text" placeholder="Votre Prénom" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Téléphone</label>
+                        <input type="tel" placeholder="Votre nº de téléphone">
+                    </div>
+                    <div class="input-group">
+                        <label>Adresse Postale</label>
+                        <input type="text" placeholder="Votre Adresse Postale">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Âge</label>
+                        <input type="number" placeholder="Âge">
+                    </div>
+                    <div class="input-group">
+                        <label>Sexe</label>
+                        <select>
+                            <option value="">Sélectionner</option>
+                            <option value="M">Masculin</option>
+                            <option value="F">Féminin</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">J'accepte le règlement du jeu et la politique de confidentialité.</label>
+                </div>
+
+                <button type="submit" class="btn-main">Lancer l'unboxing</button>
+            </form>
+            <p class="footer-note">Règles du jeu disponibles en bas de page</p>
+        </div>
+    </div>
+</body>
+</html>
