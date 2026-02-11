@@ -1,56 +1,61 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instant Gagnant - Foot Locker</title>
-    <link rel="stylesheet" href="style.css">
+    <title>FL Unboxed - Formulaire</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-    <div class="container">
-
-        <div class="gauche">
-
+    <div class="main-container">
+        <div class="hero-image-section">
+            <img src="image/Bo_te Cadeau Sans Texte 4.png" alt="Mystery Drop" class="main-img">
         </div>
 
-        <div class="droite">
-            <img>
-
-            <h2> FL UNBOXED:<br>Drop Mystère in Paris</h2>
-            <p>Remplissez vos infos pour débloquer le Drop.</p>
-
-            <form id="UnboxingForm">
-
-                <div class="form_email">
+        <div class="form-section">
+            <img src="image/Logo Foot Locker Style 3.png" alt="Logo FL" class="logo">
+            <h1 class="title">FL UNBOXED :<br>DROP MYSTÈRE IN PARIS</h1>
+            <p class="subtitle">Remplissez vos infos pour débloquer le Drop.</p>
+            
+            <form class="registration-form">
+                <div class="input-group">
                     <label>Email *</label>
                     <input type="email" placeholder="Votre e-mail" required>
                 </div>
-
-                <div class="form_nom_prenom">
-                    <div class="input_nom">
+                
+                <div class="form-row">
+                    <div class="input-group">
                         <label>Nom *</label>
                         <input type="text" placeholder="Votre Nom" required>
                     </div>
-                    <div class="input_prenom">
+                    <div class=git "input-group">
                         <label>Prénom *</label>
                         <input type="text" placeholder="Votre Prénom" required>
                     </div>
                 </div>
 
+<<<<<<< HEAD
                 <div class="form_tel_adresse">
                     <div class="input_tel">
                         <label>Téléphone</label>
                         <input type="tel" placeholder="Votre n° de téléphone">
                     </div>
                     <div class="input_adresse">
+=======
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Téléphone</label>
+                        <input type="tel" placeholder="Votre nº de téléphone">
+                    </div>
+                    <div class="input-group">
+>>>>>>> enayat-dev
                         <label>Adresse Postale</label>
                         <input type="text" placeholder="Votre Adresse Postale">
                     </div>
                 </div>
 
+<<<<<<< HEAD
                 <div class="form_age_sexe">
                     <div class="input_age">
                         <label>Âge</label>
@@ -62,10 +67,24 @@
                             <option value="">Votre Sexe</option>
                             <option value="H">Homme</option>
                             <option value="F">Femme</option>
+=======
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Âge</label>
+                        <input type="number" placeholder="Âge">
+                    </div>
+                    <div class="input-group">
+                        <label>Sexe</label>
+                        <select>
+                            <option value="">Sélectionner</option>
+                            <option value="M">Masculin</option>
+                            <option value="F">Féminin</option>
+>>>>>>> enayat-dev
                         </select>
                     </div>
                 </div>
 
+<<<<<<< HEAD
                 <div class="form_reglement">
                     <input type="checkbox" id="reglement">
                     <label for="reglement">J'accepte le règlement</label>
@@ -86,4 +105,17 @@
     <script src="script.js"></script>
 </body>
 
+=======
+                <div class="checkbox-container">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">J'accepte le règlement du jeu et la politique de confidentialité.</label>
+                </div>
+
+                <button type="submit" class="btn-main">Lancer l'unboxing</button>
+            </form>
+            <p class="footer-note">Règles du jeu disponibles en bas de page</p>
+        </div>
+    </div>
+</body>
+>>>>>>> enayat-dev
 </html>
