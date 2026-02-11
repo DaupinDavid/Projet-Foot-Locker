@@ -1,8 +1,9 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #000;
+    background: repeating-linear-gradient(90deg, #000, #000 6px, #111 6px, #111 12px);
     color: #fff;
     font-family: 'Inter', sans-serif;
 }
@@ -18,7 +19,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #111;
+    background: transparent;
 }
 
 .main-img {
@@ -35,10 +36,13 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+    background: transparent;
 }
 
-.logo { width: 140px; margin-bottom: 20px; }
+.logo {
+    width: 140px;
+    margin-bottom: 20px;
+}
 
 .title {
     font-style: italic;
@@ -82,7 +86,8 @@ label {
     margin-bottom: 5px;
 }
 
-input, select {
+input,
+select {
     width: 100%;
     padding: 12px;
     background-color: transparent;
@@ -130,7 +135,7 @@ input, select {
 body {
     margin: 0;
     height: 100vh;
-    background-color: #1a1a1a; /* Fond de la page sombre */
+    background: repeating-linear-gradient(90deg, #000, #000 6px, #111 6px, #111 12px);
     color: #fff;
     font-family: 'Inter', sans-serif;
     display: flex;
@@ -149,25 +154,32 @@ body {
 }
 
 .box-container {
-    width: 520px;  /* Taille exacte Figma */
-    height: 520px; /* Taille exacte Figma */
-    background-color: #333333; /* Couleur Figma */
-    border: 1px solid #ffffff; /* Bordure 1px blanche */
+    width: 520px;
+    /* Taille exacte Figma */
+    height: 520px;
+    /* Taille exacte Figma */
+    background-color: #333333;
+    /* Couleur Figma */
+    border: 1px solid #ffffff;
+    /* Bordure 1px blanche */
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
-    overflow: hidden; /* Pour que l'image ne dépasse pas si elle est plus grande */
+    overflow: hidden;
+    /* Pour que l'image ne dépasse pas si elle est plus grande */
 }
 
 .box-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* L'image remplira tout le cadre sans être déformée */
+    object-fit: cover;
+    /* L'image remplira tout le cadre sans être déformée */
 }
 
 .btn-action {
-    width: 400px; /* Taille approximative du bouton blanc */
+    width: 400px;
+    /* Taille approximative du bouton blanc */
     padding: 18px 0;
     background-color: #ffffff;
     color: #000000;
@@ -189,9 +201,14 @@ body {
 
 
 /* --- BASE --- */
-* { box-sizing: border-box; }
-body, html {
-    margin: 0; padding: 0;
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
     height: 100%;
     background-color: #000;
     color: #fff;
@@ -199,21 +216,43 @@ body, html {
 }
 
 .bg-pattern {
-    background: repeating-linear-gradient(90deg, #000, #000 2px, #0c0c0c 2px, #0c0c0c 4px);
+    background: repeating-linear-gradient(90deg, #000, #000 6px, #111 6px, #111 12px);
 }
 
-.flex-centered { display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.no-scroll { overflow: hidden; }
+.flex-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
 
 /* --- TITRES --- */
-.main-title { font-style: italic; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin: 10px 0; }
-.centered { text-align: center; }
-.subtitle { color: #888; margin-bottom: 30px; font-size: 14px; }
+.main-title {
+    font-style: italic;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+.centered {
+    text-align: center;
+}
+
+.subtitle {
+    color: #888;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
 
 /* --- CADRES & IMAGES --- */
-.mystery-box-frame, .media-frame {
-    border: 1px solid #ffffff;
-    background-color: #333333;
+.mystery-box-frame,
+.media-frame {
+    
     position: relative;
     overflow: hidden;
     display: flex;
@@ -221,8 +260,17 @@ body, html {
     align-items: center;
 }
 
-.frame-520 { width: 520px; height: 520px; margin: 40px 0; }
-.frame-538 { width: 538px; height: 539px; margin: 30px 0; }
+.frame-520 {
+    width: 520px;
+    height: 520px;
+    margin: 40px 0;
+}
+
+.frame-538 {
+    width: 538px;
+    height: 539px;
+    margin: 30px 0;
+}
 
 .contained-img {
     max-width: 85%;
@@ -246,42 +294,142 @@ body, html {
     z-index: 5;
     padding: 5px;
 }
-.logo-fit { max-width: 90%; max-height: 90%; object-fit: contain; }
+
+.logo-fit {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
 
 /* --- DÉCORATION WIREFRAME --- */
-.wireframe-lines::before, .wireframe-lines::after {
+.wireframe-lines::before,
+.wireframe-lines::after {
     content: '';
     position: absolute;
-    background: rgba(255,255,255,0.1);
-    width: 150%; height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    width: 150%;
+    height: 1px;
     z-index: 1;
 }
-.wireframe-lines::before { transform: rotate(45deg); }
-.wireframe-lines::after { transform: rotate(-45deg); }
+
+.wireframe-lines::before {
+    transform: rotate(45deg);
+}
+
+.wireframe-lines::after {
+    transform: rotate(-45deg);
+}
 
 /* --- BOUTONS --- */
 .btn-primary {
-    background: #ffffff; color: #000; border: none; padding: 15px;
-    font-weight: bold; text-transform: uppercase; cursor: pointer; width: 100%;
+    background: #ffffff;
+    color: #000;
+    border: none;
+    padding: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
 }
-.btn-large { width: 400px; padding: 20px; }
+
+.btn-large {
+    width: 400px;
+    padding: 20px;
+}
 
 /* --- GLOWS --- */
-.corner-glow { position: absolute; width: 450px; height: 450px; border-radius: 50%; filter: blur(100px); opacity: 0.5; z-index: 0; }
-.red-glow { top: -100px; left: -100px; background: #ff0000; }
-.magenta-glow { top: -100px; right: -100px; background: #ff00ff; }
-.cyan-glow { bottom: -100px; left: -100px; background: #00ffff; }
-.green-glow { bottom: -100px; right: -100px; background: #00ff00; }
+.corner-glow {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.red-glow {
+    top: -100px;
+    left: -100px;
+    background: #ff0000;
+}
+
+.magenta-glow {
+    top: -100px;
+    right: -100px;
+    background: #ff00ff;
+}
+
+.cyan-glow {
+    bottom: -100px;
+    left: -100px;
+    background: #00ffff;
+}
+
+.green-glow {
+    bottom: -100px;
+    right: -100px;
+    background: #00ff00;
+}
 
 /* --- LAYOUT INSCRIPTION --- */
-.registration-layout { display: flex; height: 100vh; }
-.hero-section { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px; }
-.media-frame { width: 100%; height: 85%; }
-.form-section { flex: 1; padding: 60px; display: flex; flex-direction: column; justify-content: center; }
-.field-row { display: flex; gap: 15px; }
-.field, .field-full { margin-bottom: 15px; width: 100%; }
-input { width: 100%; background: transparent; border: 1px solid #444; color: #fff; padding: 12px; }
+.registration-layout {
+    display: flex;
+    height: 100vh;
+}
+
+.hero-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.media-frame {
+    width: 100%;
+    height: 85%;
+}
+
+.form-section {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.field-row {
+    display: flex;
+    gap: 15px;
+}
+
+.field,
+.field-full {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 12px;
+}
 
 /* --- SPINNER --- */
-.custom-spinner { width: 35px; height: 35px; border: 3px solid rgba(255,255,255,0.2); border-top: 3px solid #fff; border-radius: 50%; animation: spin 1s linear infinite; }
-@keyframes spin { to { transform: rotate(360deg); } }
+.custom-spinner {
+    width: 35px;
+    height: 35px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-top: 3px solid #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
