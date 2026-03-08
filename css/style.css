@@ -479,7 +479,7 @@ body.page-lancement .logo-texte-p3 {
 }
 
 body.page-lancement .mystery-box-frame {
-    margin-top: 60px; 
+    margin-top: 60px;
 }
 
 /* ============== ============== ============== CSS de la Page 4 ============== ============== ============== */
@@ -817,4 +817,394 @@ body.page-ouverture .img-boite {
 /* Shake */
 .shake-active {
     animation: shake 0.3s infinite;
+}
+
+/* ── CSS de la page 5 ── */
+
+/* ============== CSS de la Page Gagnant ============== */
+
+body.page-resultat-gagnant {
+    min-height: 100vh;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    background: url('../images/JORDAN-FONDDECRAN.png') center center / cover no-repeat;
+    background-color: #000;
+}
+
+
+body.page-resultat-gagnant::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(0,0,0,0.12) 0px,
+        rgba(0,0,0,0.12) 6px,
+        transparent 6px,
+        transparent 12px
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+body.page-resultat-gagnant::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at top left,     rgba(226,0,26,0.5)  0%, transparent 50%),
+        radial-gradient(ellipse at top right,    rgba(10,10,40,0.4)  0%, transparent 50%),
+        radial-gradient(ellipse at bottom right, rgba(226,0,26,0.35) 0%, transparent 50%),
+        linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* ── Néons ── */
+body.page-resultat-gagnant .corner-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.45;
+    z-index: 3;
+    pointer-events: none;
+}
+
+body.page-resultat-gagnant .red-glow     { top: -120px;    left: -120px;  background: #ff0000; }
+body.page-resultat-gagnant .magenta-glow { top: -120px;    right: -120px; background: #ff00cc; }
+body.page-resultat-gagnant .cyan-glow    { bottom: -120px; left: -120px;  background: #00ffff; }
+body.page-resultat-gagnant .green-glow   { bottom: -120px; right: -120px; background: #00ff44; }
+
+/* ── Logo ── */
+body.page-resultat-gagnant .header-logo {
+    position: absolute;
+    top: 20px;
+    left: 50%; 
+    transform: translateX(-50%);  
+    z-index: 10;
+}
+
+body.page-resultat-gagnant .logo-bloc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+body.page-resultat-gagnant .logo-fl {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+body.page-resultat-gagnant .logo-nom {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* ── Contenu ── */
+body.page-resultat-gagnant .main-content-resultat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px 40px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* ── Titres ── */
+body.page-resultat-gagnant .titre-felicitations {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 64px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 8px;
+    text-shadow: 0 0 40px rgba(226,0,26,0.9), 0 2px 20px rgba(0,0,0,0.9);
+}
+
+body.page-resultat-gagnant .sous-titre-gain {
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    margin: 0 0 40px;
+    letter-spacing: 0.04em;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.9);
+}
+
+/* ── Galerie ── */
+body.page-resultat-gagnant .galerie-gain {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+body.page-resultat-gagnant .cadre-photo {
+    width: 155px;
+    height: 155px;
+    border: 1px solid rgba(255,255,255,0.35);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.3);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+body.page-resultat-gagnant .cadre-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(226,0,26,0.5);
+}
+
+body.page-resultat-gagnant .cadre-photo.photo-centrale {
+    width: 190px;
+    height: 190px;
+    border-color: rgba(255,255,255,0.8);
+    box-shadow: 0 0 30px rgba(226,0,26,0.4);
+}
+
+body.page-resultat-gagnant .cadre-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ── Boutons ── */
+body.page-resultat-gagnant .boutons-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+body.page-resultat-gagnant .btn-secondaire {
+    padding: 15px 36px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.5);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 170px;
+}
+
+body.page-resultat-gagnant .btn-secondaire:hover {
+    background: rgba(226,0,26,0.2);
+    border-color: rgba(226,0,26,0.8);
+}
+
+body.page-resultat-gagnant .btn-principal {
+    padding: 15px 36px;
+    background: #fff;
+    color: #000;
+    border: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 170px;
+}
+
+body.page-resultat-gagnant .btn-principal:hover {
+    background: #e2001a;
+    color: #fff;
+}
+
+/* ============== CSS de la Page Perdant ============== */
+
+body.page-resultat-perdant {
+    margin: 0;
+    min-height: 100vh;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    background: url('../images/FOOTLOCKER-FONDDECRAN.png') center center / cover no-repeat;
+    background-color: #0a0a0a;
+}
+
+body.page-resultat-perdant::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(0,0,0,0.12) 0px,
+        rgba(0,0,0,0.12) 6px,
+        transparent 6px,
+        transparent 12px
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+body.page-resultat-perdant::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at top left,     rgba(10,10,10,0.7)  0%, transparent 55%),
+        radial-gradient(ellipse at top right,    rgba(10,10,10,0.6)  0%, transparent 55%),
+        radial-gradient(ellipse at bottom left,  rgba(0,200,150,0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom right, rgba(0,200,80,0.15) 0%, transparent 50%),
+        linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* ── Logo centré ── */
+body.page-resultat-perdant .header-logo {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+body.page-resultat-perdant .logo-bloc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+body.page-resultat-perdant .logo-fl {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+body.page-resultat-perdant .logo-nom {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* ── Contenu ── */
+body.page-resultat-perdant .main-content-resultat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px 40px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* ── Titre ── */
+body.page-resultat-perdant .titre-consolation {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 56px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 32px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.6);
+}
+
+/* ── Cadre promo ── */
+body.page-resultat-perdant .cadre-promo {
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 28px 52px;
+    text-align: center;
+    margin-bottom: 36px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
+    min-width: 320px;
+}
+
+body.page-resultat-perdant .label-consolation {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    margin: 0 0 16px;
+}
+
+body.page-resultat-perdant .label-promo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    margin: 0 0 8px;
+}
+
+body.page-resultat-perdant .code-reduction {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 38px;
+    letter-spacing: 0.08em;
+    color: #fff;
+    margin: 0 0 8px;
+}
+
+body.page-resultat-perdant .mention-promo {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    margin: 0;
+}
+
+/* ── Bouton ── */
+body.page-resultat-perdant .boutons-actions {
+    display: flex;
+    justify-content: center;
+}
+
+body.page-resultat-perdant .btn-copier {
+    padding: 14px 32px;
+    background: #fff;
+    color: #000;
+    border: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    min-width: 260px;
+}
+
+body.page-resultat-perdant .btn-copier:hover {
+    opacity: 0.85;
 }

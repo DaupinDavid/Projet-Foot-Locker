@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FL Unboxed - Félicitations !</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;1,800&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="page-resultat-gagnant" id="page-resultat-gagnant">
+
+    <!-- Néons -->
+    <div class="corner-glow red-glow"></div>
+    <div class="corner-glow magenta-glow"></div>
+    <div class="corner-glow cyan-glow"></div>
+    <div class="corner-glow green-glow"></div>
+
+    <!-- Logo -->
+    <header class="header-logo">
+        <div class="logo-bloc">
+            <img src="./images/Logo Foot Locker Style 3.png" alt="Logo Foot Locker" class="logo-fl">
+            <span class="logo-nom">FL Unboxed</span>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="main-content-resultat">
+        <h1 class="titre-felicitations">FÉLICITATIONS !</h1>
+        <p class="sous-titre-gain">Vous avez remporté la Air Jordan 1 High Exclusive</p>
+
+        <!-- Photos Jordan -->
+        <div class="galerie-gain">
+            <div class="cadre-photo">
+                <img src="./images/JORDAN1.png" alt="Jordan Vue 1">
+            </div>
+            <div class="cadre-photo photo-centrale">
+                <img src="./images/JORDAN2.png" alt="Jordan Vue 2">
+            </div>
+            <div class="cadre-photo">
+                <img src="./images/JORDAN3.png" alt="Jordan Vue 3">
+            </div>
+        </div>
+
+        <!-- Boutons -->
+        <div class="boutons-actions">
+            <button class="btn-secondaire" id="btn-livraison">
+                <span class="btn-icon">🏠</span>
+                <span class="btn-label">LIVRAISON</span>
+                <span class="btn-sub">À domicile</span>
+            </button>
+            <button class="btn-principal" id="btn-retrait">
+                <span class="btn-icon">🏪</span>
+                <span class="btn-label">RETRAIT</span>
+                <span class="btn-sub">En magasin</span>
+            </button>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('btn-livraison').addEventListener('click', () => {
+            window.location.href = 'page6-confirmation-gagnant.html';
+        });
+        document.getElementById('btn-retrait').addEventListener('click', () => {
+            window.location.href = 'page6-confirmation-gagnant.html';
+        });
+    </script>
+
+</body>
+
+</html>
