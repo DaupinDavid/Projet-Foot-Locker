@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FL Unboxed - Lancement du Jeu</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="page-lancement bg-pattern flex-centered no-scroll" id="page-lancement">
+
+    <div class="corner-glow red-glow"></div>
+    <div class="corner-glow magenta-glow"></div>
+    <div class="corner-glow cyan-glow"></div>
+    <div class="corner-glow green-glow"></div>
+
+    <div class="main-content">
+
+        <!-- Logo EN DEHORS du cadre comme page 4 -->
+        <div class="logo-conteneur">
+            <div class="logo-icone">
+                <img src="images/Logo Foot Locker Style 3.png" alt="Logo" class="logo-fit">
+            </div>
+            <p class="logo-texte-p3">FL Unboxed</p>
+        </div>
+
+        <!-- Cadre sans logo dedans -->
+        <div class="mystery-box-frame frame-538">
+            <img src="images/Boite1.png" alt="Animation" class="contained-img">
+            <div class="wireframe-lines"></div>
+        </div>
+
+        <h2 class="main-title centered italic">OUVERTURE EN COURS...</h2>
+        <div class="custom-spinner"></div>
+
+    </div>
+
+    <script>
+        setTimeout(function () {
+            window.location.href = 'page4-ouverture.html';
+        }, 2000);
+    </script>
+
+</body>
+
+</html>

@@ -1,3 +1,12 @@
+:root {
+    --rouge: #e83030;
+    --magenta: #d930e8;
+    --cyan: #30e8d6;
+    --vert: #30e860;
+    --fond: #0d0d0d;
+    --rouge-fl: #e2001a;
+}
+
 body,
 html {
     margin: 0;
@@ -195,7 +204,6 @@ body {
     opacity: 0.9;
 }
 
-
 /* ============== ============== ==============   CSS de la page3 ============== ============== ============== */
 /* --- SECTION DES HALOS LUMINEUX (GLOWS) --- */
 
@@ -252,7 +260,7 @@ html {
 /* --- CADRES & IMAGES --- */
 .mystery-box-frame,
 .media-frame {
-    
+
     position: relative;
     overflow: hidden;
     display: flex;
@@ -285,7 +293,7 @@ html {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    
+
     width: 120px;
     height: 60px;
     display: flex;
@@ -432,4 +440,381 @@ input {
     to {
         transform: rotate(360deg);
     }
+}
+
+body.page-lancement .logo-conteneur {
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 20px;
+}
+
+body.page-lancement .logo-icone {
+    width: 52px;
+    height: 52px;
+    background: transparent;
+    /* ← manquait */
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+body.page-lancement .logo-texte-p3 {
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 4px 0 0 0;
+    text-align: center;
+}
+
+body.page-lancement .mystery-box-frame {
+    margin-top: 60px; 
+}
+
+/* ============== ============== ============== CSS de la Page 4 ============== ============== ============== */
+
+body.page-ouverture {
+    background: var(--fond);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    overflow: hidden;
+}
+
+
+body.page-ouverture .jeu {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Néons ── */
+body.page-ouverture .neon-rouge {
+    width: 300px;
+    height: 300px;
+    background: var(--rouge);
+    top: -60px;
+    left: -60px;
+}
+
+body.page-ouverture .neon-magenta {
+    width: 280px;
+    height: 280px;
+    background: var(--magenta);
+    top: -40px;
+    right: -40px;
+}
+
+body.page-ouverture .neon-cyan {
+    width: 260px;
+    height: 260px;
+    background: var(--cyan);
+    bottom: -60px;
+    left: -40px;
+}
+
+body.page-ouverture .neon-vert {
+    width: 240px;
+    height: 240px;
+    background: var(--vert);
+    bottom: -40px;
+    right: -20px;
+}
+
+body.page-ouverture .neon-rouge,
+body.page-ouverture .neon-magenta,
+body.page-ouverture .neon-cyan,
+body.page-ouverture .neon-vert {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.75;
+    pointer-events: none;
+}
+
+/* ── Logo ── */
+body.page-ouverture .logo-conteneur {
+    position: absolute;
+    top: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    z-index: 10;
+}
+
+body.page-ouverture .logo-icone {
+    width: 52px;
+    height: 52px;
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+body.page-ouverture .img-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+body.page-ouverture .logo-texte {
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* ── Croix ── */
+body.page-ouverture .croix {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body.page-ouverture .ligne-x-1,
+body.page-ouverture .ligne-x-2,
+body.page-ouverture .ligne-horizontale,
+body.page-ouverture .ligne-verticale {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+body.page-ouverture .ligne-x-1 {
+    width: 100%;
+    height: 1.5px;
+    transform: rotate(45deg);
+}
+
+body.page-ouverture .ligne-x-2 {
+    width: 100%;
+    height: 1.5px;
+    transform: rotate(-45deg);
+}
+
+body.page-ouverture .ligne-horizontale {
+    width: 100%;
+    height: 1.5px;
+    left: 0;
+    top: 50%;
+}
+
+body.page-ouverture .ligne-verticale {
+    width: 1.5px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+}
+
+/* ── Coins ── */
+body.page-ouverture .coin {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-color: rgba(255, 255, 255, 0.5);
+    border-style: solid;
+}
+
+body.page-ouverture .haut-gauche {
+    top: 0;
+    left: 0;
+    border-width: 2px 0 0 2px;
+}
+
+body.page-ouverture .haut-droite {
+    top: 0;
+    right: 0;
+    border-width: 2px 2px 0 0;
+}
+
+body.page-ouverture .bas-gauche {
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 2px 2px;
+}
+
+body.page-ouverture .bas-droite {
+    bottom: 0;
+    right: 0;
+    border-width: 0 2px 2px 0;
+}
+
+/* ── Boîte mystère ── */
+body.page-ouverture .boite-mystere {
+    position: relative;
+    z-index: 5;
+    animation: flotter 3s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.page-ouverture .img-boite {
+    width: 160px;
+    height: auto;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+@keyframes flotter {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* ── Message d'ouverture ── */
+body.page-ouverture .ouverture-chargement {
+    margin-top: 32px;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.22em;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    animation: pulser-texte 1.8s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+@keyframes pulser-texte {
+
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* ── Points de chargement ── */
+body.page-ouverture .points-chargement {
+    display: inline-flex;
+    gap: 4px;
+    margin-left: 2px;
+}
+
+body.page-ouverture .point-chargement {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    animation: clignoter 1.4s ease-in-out infinite;
+}
+
+body.page-ouverture .point-chargement:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+body.page-ouverture .point-chargement:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes clignoter {
+
+    0%,
+    80%,
+    100% {
+        opacity: 0.2;
+        transform: scale(0.8);
+    }
+
+    40% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Shake & Pop */
+
+body.page-ouverture .img-boite {
+    transition: transform 0.15s ease-out, filter 0.15s ease-out;
+}
+
+.pop-effect {
+    transform: scale(1.15);
+    filter: brightness(1.8) blur(2px);
+}
+
+/* Shake */
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+/* Shake */
+.shake-active {
+    animation: shake 0.3s infinite;
 }

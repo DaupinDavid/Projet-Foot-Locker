@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FL Unboxed - Coffre Verrouillé</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@1,800&display=swap" rel="stylesheet">
+</head>
+
+<body class="page-coffre" id="page-coffre">
+    <h2 class="status-text">Le Coffre est Vérrouillé...</h2>
+
+    <div class="box-container">
+        <img src="./images/Boite1.png" alt="Boîte Mystère" class="box-image">
+    </div>
+
+    <button class="btn-action" id="btn-ouvrir">Ouvrir la boîte</button>
+    <script>
+        document.getElementById('btn-ouvrir').addEventListener('click', function () {
+            window.location.href = 'page3-lancement.html';
+        });
+
+    </script>
+</body>
+</html>

@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FL Unboxed - Formulaire</title>
+    <title>FL Unboxed - Inscription</title>
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-inscription" id="page-inscription">
     <div class="main-container">
         <div class="hero-image-section">
             <img src="images/Bo_te Cadeau Sans Texte 4.png" alt="Mystery Drop" class="main-img">
         </div>
 
         <div class="form-section">
-            <img src="images/Logo Foot Locker Style 3.png" alt="Logo FL" class="logo">
+            <img src="./images/Boite1.png" alt="Logo FL" class="logo">
             <h1 class="title">FL UNBOXED :<br>DROP MYSTÈRE IN PARIS</h1>
             <p class="subtitle">Remplissez vos infos pour débloquer le Drop.</p>
             
-            <form class="registration-form">
+            <form class="registration-form" id="formulaire-inscription">
                 <div class="input-group">
                     <label>Email *</label>
                     <input type="email" placeholder="Votre e-mail" required>
@@ -29,7 +29,7 @@
                         <label>Nom *</label>
                         <input type="text" placeholder="Votre Nom" required>
                     </div>
-                    <div class=git "input-group">
+                    <div class="input-group">
                         <label>Prénom *</label>
                         <input type="text" placeholder="Votre Prénom" required>
                     </div>
@@ -71,5 +71,11 @@
             <p class="footer-note">Règles du jeu disponibles en bas de page</p>
         </div>
     </div>
+    <script>
+        document.getElementById('formulaire-inscription').addEventListener('submit', function(evenement) {
+            evenement.preventDefault();
+            window.location.href = 'page2-coffre.html';
+        });
+    </script>
 </body>
 </html>
