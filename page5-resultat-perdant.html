@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FL Unboxed - Pas cette fois...</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;1,800&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="page-resultat-perdant" id="page-resultat-perdant">
+
+    <!-- Glows -->
+    <div class="corner-glow cyan-glow"></div>
+    <div class="corner-glow green-glow"></div>
+
+    <!-- Logo -->
+    <header class="header-logo">
+        <div class="logo-bloc">
+            <img src="./images/Logo Foot Locker Style 3.png" alt="Logo Foot Locker" class="logo-fl">
+            <span class="logo-nom">FL Unboxed</span>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="main-content-resultat">
+        <h1 class="titre-consolation">PAS CETTE FOIS...</h1>
+
+        <!-- Cadre code promo -->
+        <div class="cadre-promo">
+            <p class="label-consolation">Ne partez pas les mains vides !</p>
+            <p class="label-promo">CODE PROMO</p>
+            <p class="code-reduction" id="code-fl">FL-PARIS-15</p>
+            <p class="mention-promo">Valable sur tout le site!</p>
+        </div>
+
+        <!-- Bouton -->
+        <div class="boutons-actions">
+            <button class="btn-principal btn-copier" id="btn-copier-code">COPIER LE CODE</button>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('btn-copier-code').addEventListener('click', () => {
+            const code = document.getElementById('code-fl').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = document.getElementById('btn-copier-code');
+                btn.textContent = 'CODE COPIÉ ✓';
+                btn.style.background = '#555';
+                btn.style.color = '#fff';
+                btn.disabled = true;
+
+                const msg = document.createElement('p');
+                msg.textContent = 'Votre code a été copié — vous allez être redirigé dans 3 secondes.';
+                msg.style.cssText = `
+                color: rgba(255,255,255,0.6);
+                font-family: 'Barlow Condensed', sans-serif;
+                font-size: 14px;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                margin-top: 20px;
+                text-align: center;
+                width: 100%;
+                animation: fadeIn 0.5s ease;
+            `;
+                btn.parentElement.parentElement.appendChild(msg);
+
+                setTimeout(() => {
+                    window.location.href = 'page6-confirmation-perdant.html';
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+
+</html>

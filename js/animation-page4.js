@@ -43,9 +43,9 @@ setTimeout(() => {
 setTimeout(() => {
   const tirage = Math.random(); 
   if (tirage < 0.20) {
-    window.location.href = "page5-gagnant.html"; 
+    window.location.href = "page5-resultat-gagnant.html"; 
     
   } else {
-    window.location.href = "page5-consolation.html";
+    window.location.href = "page5-resultat-perdant.html";
   }
 }, 8000);
