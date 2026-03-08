@@ -1,0 +1,367 @@
+/* Enayatullah Gohary */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #1a1a1a 25%, transparent 25%, transparent 75%, #1a1a1a 75%, #1a1a1a),
+                linear-gradient(45deg, #1a1a1a 25%, transparent 25%, transparent 75%, #1a1a1a 75%, #1a1a1a);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    background-color: #2a2a2a;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+  }
+  
+  .logo-section {
+    background-color: white;
+    padding: 30px 50px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    animation: slideDown 0.6s ease-out;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  .logo-placeholder {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    border: 2px dashed #ccc;
+  }
+  
+  .logo-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #000;
+    margin: 0;
+  }
+  
+  .checkmark-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    animation: scaleIn 0.8s ease-out 0.3s both;
+  }
+  
+  .checkmark-circle {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  }
+  
+  .checkmark {
+    width: 100px;
+    height: 100px;
+    position: relative;
+  }
+  
+  .checkmark::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    border: 4px solid #000;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg) translate(-10px, -10px);
+    left: 30px;
+    top: 35px;
+    animation: checkmarkDraw 0.6s ease-out 0.8s both;
+  }
+  
+  .checkmark::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 50px;
+    border: 4px solid #000;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg) translate(-25px, -5px);
+    left: 50px;
+    top: 20px;
+    animation: checkmarkDraw 0.6s ease-out 1s both;
+  }
+  
+  .content {
+    text-align: center;
+    color: white;
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+  }
+  
+  .main-title {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-style: italic;
+    margin: 0 0 40px 0;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+    color: #ccc;
+    line-height: 1.6;
+    margin: 0 0 30px 0;
+  }
+  
+  .subtitle-secondary {
+    font-size: 16px;
+    color: #999;
+    line-height: 1.6;
+    margin: 0 0 60px 0;
+  }
+  
+  .button-container {
+    animation: fadeInUp 0.8s ease-out 0.7s both;
+  }
+  
+  .return-button {
+    display: inline-block;
+    background-color: white;
+    color: #000;
+    border: none;
+    padding: 18px 60px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    min-width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .return-button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .return-button:active {
+    transform: translateY(-1px);
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes checkmarkDraw {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      gap: 40px;
+    }
+  
+    .logo-section {
+      padding: 20px 30px;
+    }
+  
+    .logo-placeholder {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .logo-text {
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+  
+    .checkmark-container {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .checkmark {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .checkmark::before {
+      width: 40px;
+      height: 20px;
+      border-width: 3px;
+      left: 25px;
+      top: 28px;
+    }
+  
+    .checkmark::after {
+      width: 20px;
+      height: 40px;
+      border-width: 3px;
+      left: 40px;
+      top: 15px;
+    }
+  
+    .main-title {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+  
+    .subtitle,
+    .subtitle-secondary {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  
+    .subtitle-secondary {
+      margin-bottom: 40px;
+    }
+  
+    .return-button {
+      min-width: 280px;
+      padding: 15px 40px;
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      padding: 10px;
+    }
+  
+    .container {
+      gap: 30px;
+    }
+  
+    .logo-section {
+      padding: 15px 20px;
+    }
+  
+    .logo-placeholder {
+      width: 70px;
+      height: 70px;
+      border-width: 1px;
+    }
+  
+    .logo-text {
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+  
+    .checkmark-container {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .checkmark {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .checkmark::before {
+      width: 35px;
+      height: 18px;
+      border-width: 2px;
+      left: 20px;
+      top: 25px;
+    }
+  
+    .checkmark::after {
+      width: 18px;
+      height: 35px;
+      border-width: 2px;
+      left: 35px;
+      top: 12px;
+    }
+  
+    .main-title {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+  
+    .subtitle,
+    .subtitle-secondary {
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+  
+    .subtitle-secondary {
+      margin-bottom: 40px;
+    }
+  
+    .return-button {
+      min-width: 100%;
+      padding: 12px 30px;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+    }
+  }
+
+
+
+/* Enayatullah Gohary  */
+
